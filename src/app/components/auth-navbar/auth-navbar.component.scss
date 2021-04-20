@@ -1,0 +1,96 @@
+.spacer {
+    flex: 1 1 auto;
+    }
+  
+  .movingtext {
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .movingtext span {
+    display: inline-block;
+    width: max-content;
+    color: greenyellow;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+  
+    padding-left: 100%;
+    /* show the marquee just outside the paragraph */
+    will-change: transform;
+    animation: movingtext 45s linear infinite;
+  }
+  
+  .movingtext span:hover {
+    animation-play-state: paused;
+    
+  }
+  
+  
+  @keyframes movingtext {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+  
+  
+  /* Respect user preferences about animations */
+  @media (prefers-reduced-motion: reduce) {
+    .movingtext span {
+      animation-iteration-count: 1;
+      animation-duration: 0.001; 
+      /* instead of animation: none, so an animationend event is 
+       * still available, if previously attached.
+       */
+      width: auto;
+      padding-left: 0;
+    }
+  }
+  
+  button.mat-menu-item {
+    width: auto;
+    vertical-align: middle;
+    font-size: 18px;
+  }
+    .mat-button-base {
+      margin: 8px 8px 8px 0;
+    }
+    // .mat-flat-button {
+      
+    // }
+    
+    .expanded-toolbar {
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #toolbar {
+      position: absolute;
+      background-color: transparent;
+      height: 80px;
+      color: white;
+    }
+    .logo {
+      width: 100px;
+    }
+    
+    .mat-icon {
+      margin-right: 10px;
+      vertical-align: middle;
+      font-size: 32px;
+      position: relative;
+    }
+    .wrapper {
+      position: relative;
+      background-color: transparent;
+      top: 0px;
+      height: 0vh;
+    }
+    .navbar-top {
+      position: relative;
+      background-color: transparent;
+      padding-top: 0px;
+      padding-bottom: 100px;
+    }
+    

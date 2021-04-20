@@ -1,0 +1,177 @@
+<div class="container-fluid">
+    <div class="wrapper">
+      <div class="navbar-top">
+        <mat-toolbar id="toolbar" class="transparent">
+          <span>tMb</span> 
+          <img class="logo" src="../assets/img/tmb/logo_tmb.png"> 
+  
+          <span class="spacer"></span>
+          <div>
+            <p class="movingtext">
+              <span>This website is Developed for West Bengal PWD Civil Engineers. 
+                <strong style="color: white;">Step-1 => </strong> Register with valid email address.
+                <strong style="color: white;">Step-2 =></strong> Verify your email from email verify Notification.
+                <strong style="color: white;">Step-3 =></strong> After succesfull email verification. Go for Login.
+                <strong style="color: white;">Step-4 =></strong> After login you access Dashboard and then update your profile to get your website menu as per your registration profile.
+              </span>
+            </p>
+          </div>
+          <span class="spacer"></span>
+          
+          <button mat-button *ngIf="!isLoggedIn" [routerLink]="['/auth']" routerLinkActive="active">
+            <mat-icon>home</mat-icon>
+            Home
+          </button>
+          <button mat-button *ngIf="isLoggedIn" [routerLink]="['/dashboard']" routerLinkActive="active">
+            <mat-icon>dashboard</mat-icon>
+            Dashboard
+          </button>
+          <button mat-button *ngIf="!isLoggedIn" [routerLink]="['auth/register']" routerLinkActive="active">
+            <mat-icon>how_to_reg</mat-icon>
+            Register
+          </button>
+          <button mat-button *ngIf="!isLoggedIn" [routerLink]="['auth/login']" routerLinkActive="active">
+            <mat-icon>fingerprint</mat-icon>
+            Login
+          </button>
+          <button mat-button *ngIf="isLoggedIn" >
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item 
+              data-toggle="modal" 
+              data-target="#aboutModal" 
+              data-placement="top" >
+              <mat-icon>dialpad</mat-icon>
+              <span>About</span>
+            </button>
+            <button mat-menu-item [routerLink]="['auth/contact']" routerLinkActive="active">
+              <mat-icon>email</mat-icon>
+              <span>Contact</span>
+            </button>
+            <button mat-menu-item>
+              <a href="https://www.youtube.com/playlist?list=PL-XnBqE6GzTrF2nX1Qm3v_eQgqo1U4xYH" target="_blank">
+                <mat-icon >ondemand_video</mat-icon>
+                <span>Help</span>
+              </a>
+            </button>
+            <button mat-menu-item>
+              <a href="https://www.facebook.com/tmb2021" target="_blank">
+                <mat-icon >facebook</mat-icon>
+                <span>Facebook</span>
+              </a>
+            </button>
+            <button mat-menu-item disable>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+        </mat-toolbar>
+  
+        <!-- About Modal -->
+        <div class="modal" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" style="font-size: large; color: rgb(0, 140, 255);" id="modalLongTitle">About tMb</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body paragraph" style="text-align: justify;">
+                <tr style="font-size: medium; color: rgb(0, 0, 0);">
+                  <th>
+                    tMb in full form is "try my best" and it is a platform to share best knowledge & Knowhow to others. 
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    1) Aim to develope this website:
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li> 
+                        All Civil Engineers under West Bengal Public Works Directorate are excellence in their respective post and they work very hard restlessly throughout the year to build West Bengal as no.1 state in our country.
+                        During promotion or any other reasons, the data required is not readily availabe to meet their quaries. This website gives you the privilege to avail data required for all civil engineers instantly. All data provided in this website are collected from openly published gradation lists or several other orders from time to time throughout the year from West Bengal PWD website or may be from any other reliable sources.    
+                      </li> 
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    2) Next piority (under Developement): 
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>
+                        To discuss the technical problems by sharing knowledge and suggestions through discussion room.
+                      </li> 
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    3) PWD Works (under Developement): 
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li> 
+                        In this section so many technical references will be available for our daily working life.
+                      </li>
+                      <li> 
+                        Preparation of Details estimate with rate analysis.
+                      </li>
+                      <li> 
+                        At a glance Pwd Published Schedule Rates.
+                      </li>
+                      <li> 
+                        Details of Roads and culvert location (if any).   
+                      </li>
+                    </ul>     
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    4. Support to tMb:     
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>
+                        tMb request to all PWD civil engineers of the West Bengal wishing to get an admin role in this website which would help in the proper data maintenance to make it the future website for all West Bengal PWD Civil Engineers.
+                      </li>
+                      <li> 
+                        Last but not the least, I hope that you will be benifitted by best efforts from tMb and many featues will be added in this website day by day in future.
+                      </li>
+                      &nbsp;
+                      <th style="font-size: small;">
+                        I would like to acknowledge <strong style="color: rgb(0, 89, 255);"> Mr. Sukanta Hui</strong> for his efforts and support to develope this website.     
+                      </th>
+                    </ul>     
+                  </td>
+                </tr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <router-outlet></router-outlet>
+            
+    </div>
+  </div>
+    
+    
+    
+    
+  
